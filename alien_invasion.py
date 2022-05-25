@@ -182,21 +182,11 @@ class AlienInvasion:
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
 
-<<<<<<< HEAD
         # 检测外星人是否到达屏幕左边边缘。
-=======
-        # 检测外星人是否到达屏幕底部。
->>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
         self._check_aliens_bottom()
         
-        
-
     def _check_aliens_bottom(self):
-<<<<<<< HEAD
         """检查是否有外星人到达了屏幕左边边缘。"""
-=======
-        """检查是否有外星人到达了屏幕底端。"""
->>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
         screen_rect = self.screen.get_rect()
         for alien in self.aliens.sprites():
             if alien.rect.left <= screen_rect.left:
@@ -215,11 +205,7 @@ class AlienInvasion:
             self.aliens.empty()
             self.bullets.empty()
             
-<<<<<<< HEAD
             # 创建一群新外星人，并将飞船放置到屏幕左边中央。
-=======
-            # 创建一群新外星人，并将飞船放置到屏幕底部中央。
->>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
             self.ship.center_ship()
             self._create_fleet()
             
@@ -270,15 +256,9 @@ class AlienInvasion:
                 break
             
     def _change_fleet_direction(self):
-<<<<<<< HEAD
         """将整群外星人左移，并改变它们的方向。"""
         for alien in self.aliens.sprites():
-            alien.rect.y -= self.settings.fleet_drop_speed
-=======
-        """将整群外星人右移，并改变它们的方向。"""
-        for alien in self.aliens.sprites():
             alien.rect.x -= self.settings.fleet_drop_speed
->>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
         self.settings.fleet_direction *= -1
 
     def _update_screen(self):
