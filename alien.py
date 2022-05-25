@@ -11,7 +11,11 @@ class Alien(Sprite):
         self.settings = ai_game.settings
 
         # 加载外星人图像并设置其rect属性。
+<<<<<<< HEAD
         self.image = pygame.image.load('images/alien.bmp')
+=======
+        self.image = pygame.image.load('Alien/scoring/images/alien.bmp')
+>>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
         self.rect = self.image.get_rect()
 
         # 每个外星人最初都在屏幕左上角附近。
@@ -29,7 +33,11 @@ class Alien(Sprite):
             return True
 
     def update(self):
+<<<<<<< HEAD
         """向下或上移动外星人。"""
+=======
+        """向左或右移动外星人。"""
+>>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
         self.y += (self.settings.alien_speed *
                         self.settings.fleet_direction)
         self.rect.y = self.y

@@ -26,6 +26,18 @@ class Settings:
         # 外星人分数的提高速度。
         self.score_scale = 1.5
         
+<<<<<<< HEAD
+=======
+        # 音效设置
+        # self.bullet_sound = pygame.mixer.Sound("../sounds/bullet.wav")
+        # self.super_bullet_sound = pygame.mixer.Sound("../sounds/super_bullet.wav")
+        # self.ship_hit_sound = pygame.mixer.Sound("../sounds/ship_hit.wav")
+        # self.start_new_level_sound = pygame.mixer.Sound("../sounds/start_new_level.wav")
+        # self.super_mode_sound = pygame.mixer.Sound("../sounds/super_mode.wav")
+        # self.gameover_sound = pygame.mixer.Sound("../sounds/gameover.wav")
+        # self.recordbroken_sound = pygame.mixer.Sound("../sounds/recordbroken.wav")
+        
+>>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
         # 初始化游戏动态设置
         self.initialize_dynamic_settings()
 
@@ -35,7 +47,11 @@ class Settings:
         self.bullet_speed = 3.0
         self.alien_speed = 1.5
 
+<<<<<<< HEAD
         # fleet_direction为1表示向下，为-1表示向上。
+=======
+        # fleet_direction为1表示向右，为-1表示向左。
+>>>>>>> 49bc790eee7c9dccf112f83afad694180a23ce7e
         self.fleet_direction = 1
 
         # 记分。
