@@ -17,7 +17,6 @@ class Ship(Sprite):
         self.rect = self.image.get_rect()
 
         # 对于每艘新飞船，都将其放在屏幕左边缘的中央。
-        # self.rect.midbottom = self.screen_rect.midbottom
         self.rect.midleft = self.screen_rect.midleft
 
         # 在飞船中的属性x中存储小数值。

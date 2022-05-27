@@ -19,7 +19,6 @@ class Alien(Sprite):
         self.rect.y = self.rect.height
 
         # 存储外星人的精确位置。
-        # self.x = float(self.rect.x)
         self.y = float(self.rect.y)
 
     def check_edges(self):

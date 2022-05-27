@@ -11,6 +11,8 @@ class GameStats:
 
         # 任何情况下都不应重置最高得分。
         # self.high_score = 0
+        
+        # 读取文件最高得分。
         self.read_high_score()
         
     def reset_stats(self):

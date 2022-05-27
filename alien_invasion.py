@@ -24,8 +24,12 @@ class AlienInvasion:
         
         # 全屏运行游戏
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+        # 获取屏幕宽度
         self.settings.screen_width = self.screen.get_rect().width
+        # 获取屏幕高度
         self.settings.screen_height = self.screen.get_rect().height
+        
+        # 设置窗口标题
         pygame.display.set_caption("Alien Invasion")
 
         # 创建一个用于存储游戏统计信息的实例
@@ -35,12 +39,13 @@ class AlienInvasion:
         
         """将飞船绘制到屏幕上"""
         self.ship = Ship(self)
+        
+        # 初始化群组管理
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
         self.stars = pygame.sprite.Group()
         
-        
-        self.stars = pygame.sprite.Group()
+        #绘制星星背景
         self._create_starry()
         self._create_fleet()
 
@@ -94,9 +99,6 @@ class AlienInvasion:
             # 创建一群新的外星人并让飞船居中。
             self._create_fleet()
             self.ship.center_ship()
-            
-            # 进入无敌模式五秒
-            # self.activate_super_mode()
 
             # 隐藏鼠标光标。
             pygame.mouse.set_visible(False)
@@ -212,7 +214,7 @@ class AlienInvasion:
             # 暂停。
             sleep(1)
             
-            
+        # 终止游戏
         else:
             self.stats.game_active = False
             pygame.mouse.set_visible(True)
