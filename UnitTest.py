@@ -6,7 +6,6 @@ import win32con
 from unittest.mock import Mock
 from alien_invasion import AlienInvasion
 
-
 class UpDownTest(TestCase):
     """单元测试的类."""
     
