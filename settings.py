@@ -18,7 +18,7 @@ class Settings:
         # 子弹颜色设置。
         self.bullet_color = (255, 255, 255)
         # 可发射子弹数目。
-        self.bullets_allowed = 20
+        self.bullets_allowed = 3
 
         # 外星人设置。
         self.fleet_drop_speed = 10

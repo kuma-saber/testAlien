@@ -44,7 +44,8 @@ class AlienInvasion:
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
         self.stars = pygame.sprite.Group()
-        
+        #退出
+        self.end_game = False
         #绘制星星背景
         self._create_starry()
         self._create_fleet()
@@ -55,7 +56,7 @@ class AlienInvasion:
     def run_game(self):
         
         """开始游戏的主循环"""
-        while True:
+        while not self.end_game:
             self._check_events()
             
             if self.stats.game_active:
@@ -76,6 +77,7 @@ class AlienInvasion:
                 self._check_keyup_events(event)
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_pos = pygame.mouse.get_pos()
+                print(mouse_pos)
                 self._check_play_button(mouse_pos)
 
     def _check_play_button(self, mouse_pos):
@@ -311,8 +313,8 @@ class AlienInvasion:
     def _end_game(self):
         """保存最高分数记录并关闭游戏"""
         self.stats.save_high_score()
-        sys.exit()
-        
+        self.end_game = True
+    
         
 if __name__ == '__main__':
     # 创建游戏实例并运行游戏.
